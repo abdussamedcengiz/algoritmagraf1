@@ -1,0 +1,74 @@
+class Vertex    // (köşe) ifade eder.
+ {
+      public bool wasVisited;
+      public string label;
+
+       public Vertex(string label)
+       {
+          this.label = label;   //vertex ismi
+          wasVisited = false;   // Ziyaret edilip edilmediği
+       }
+ }
+
+
+
+--------------------------------------------------------------------------------------------------
+class Graph
+ {
+       //vertex nesneleri dizisi
+      public List<Vertex> vertices; 
+      public List<String> verticesName = new List<String>();
+      public int[,] adjMatrix;
+      public double[,] weightedMatrix;
+      public int numVerts;
+
+      //kaç elemanli bir graf olacagini belirleyen 
+     public Graph(int number) 
+     {
+        int NUM_VERTICES = number;
+
+        vertices = new List<Vertex>(); 
+        numVerts = 0;
+
+        //bu graphi gösterebilmek açısından komşuluk ve ağırlık matrisi olusturuluyor
+        adjMatrix = new int[NUM_VERTICES, NUM_VERTICES]; 
+        weightedMatrix = new double[NUM_VERTICES, NUM_VERTICES];
+
+        //ilk olusturuldugu sirada olusturulmadıgından tüm vertex arasi bağ hepsi 0
+        for (int j = 0; j <= (NUM_VERTICES - 1); j++) 
+        for (int k = 0; k <= (NUM_VERTICES - 1); k++)
+        {
+          adjMatrix[j, k] = 0;
+          weightedMatrix[j, k] = 0;
+        }
+    }
+
+    // grafa köşe yani vertex ekler.
+    public void AddVertex(string label) 
+    {
+      if(numVerts<=NUM_VERTICES )
+      {
+        vertices.Add(new Vertex(label));
+        verticesName.Add(label);
+        numVerts++;
+      }
+    }
+   
+    //köşeleri bağlar her bağlanan köşeye adjmatrix ve mesafeye göre weighted değeri ekler.
+    public void AddEgde(int start,int eend,double weight) 
+   {
+     adjMatrix[start, eend] = 1;
+     adjMatrix[eend, start] = 1;
+
+     weightedMatrix[start, eend] =weight;
+     weightedMatrix[eend, start] = weight;
+    }
+
+   //vertexi ekrana bastirir.
+   public void ShowVertex(int v) 
+   {
+     Console.Write(vertices[v].label + " ");
+   }
+ 
+}
+
