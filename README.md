@@ -1,4 +1,20 @@
-# algoritmagraf1
+# Graf Algoritmalari Odevi
+
+Graf teorisi ve en kisa yol probleminin islendigi odev.
+
+## Kod
+
+`class Vertex     (kose) ifade eder..txt` -- **C#** ile yazilmis graf
+uygulamasi. `Vertex` sinifi bir kosenin adini ve ziyaret edilip
+edilmedigini (`wasVisited`) tutuyor; uzerine graf gezinme ve en kisa yol
+hesabi kuruluyor.
+
+> Dosya `.txt` uzantisiyla kaydedildigi icin GitHub kodu renkli
+> gostermiyor; derlemek icin once `.cs` olarak kaydedilmesi gerekiyor.
+
+---
+
+## Odev raporu
  
 
 Graf teorisi, birçok farklı disiplinde kullanılan matematiksel bir teoridir. Bu teori, nokta ve çizgilerden oluşan yapıları kullanarak gerçek hayattaki pek çok problemin modellemesi için kullanılır. Graf teorisi, bu yapıları kullanarak çeşitli algoritmalar geliştirmek ve problemleri çözmek için kullanılabilir.
