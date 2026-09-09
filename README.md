@@ -4,13 +4,15 @@ Graf teorisi ve en kisa yol probleminin islendigi odev.
 
 ## Kod
 
-`class Vertex     (kose) ifade eder..txt` -- **C#** ile yazilmis graf
-uygulamasi. `Vertex` sinifi bir kosenin adini ve ziyaret edilip
-edilmedigini (`wasVisited`) tutuyor; uzerine graf gezinme ve en kisa yol
-hesabi kuruluyor.
+`Graph.cs` -- **C#** ile yazilmis graf uygulamasi. `Vertex` sinifi bir
+kosenin adini ve ziyaret edilip edilmedigini (`wasVisited`) tutuyor;
+`Graph` sinifi komsuluk matrisi ve agirlik matrisi uzerinden graf gezinme
+ile en kisa yol hesabini yapiyor.
 
-> Dosya `.txt` uzantisiyla kaydedildigi icin GitHub kodu renkli
-> gostermiyor; derlemek icin once `.cs` olarak kaydedilmesi gerekiyor.
+> Dosya daha once `class Vertex     (kose) ifade eder..txt` adiyla
+> duruyordu; `.cs` olarak yeniden adlandirildi. Derlemek icin dosyanin
+> basina `using System;` ve `using System.Collections.Generic;` satirlari
+> eklenmeli -- odev metninde bu satirlar yoktu.
 
 ---
 
